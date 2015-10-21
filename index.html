@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html ng-app="userProfiles">
+
+	<head>
+	<title>My Page</title>
+	
+	</head>
+
+
+	<body ng-controller="myController">
+		<div ng-repeat="user in users">
+			<div style="float: left">
+				<span>id: {{user.id}}</span><br />
+				<span>First Name: {{user.first_name}}</span><br />
+				<span>Last Name: {{user.last_name}}</span><br />
+			</div>
+			<img ng-src="{{user.avatar}}" /><br />
+		</div>
+
+		<button ng-click="populateUsers()">Click Me</button>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+		<script src="app.js"></script>
+		<script src="service.js"></script>
+		<script src="controller.js"></script>
+
+
+	</body>
+
+</html>
